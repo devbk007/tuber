@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<main class="contact-us">
+    <div class="banner">
+      {% include 'messages.html' %}
+      <img src="{% static './assets/images/bg-banner.png' %}" alt="" class="img-fluid w-100">
+      <h1 class="text-center">
+        Ytubers
+      </h1>
+    </div>
+
+    <section class="container mt-5">
+      <h2 class="text-center"> Requests received</h2>
+
+      <div class="table-responsive- mt-3">
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">City</th>
+              <th scope="col">Details</th>
+              <th scope="col">Status</th>
+              <th scope="col">Status Updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for creator in creator %}
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <td>{{creator.city}}</td>
+              <td>{{creator.details}}</td>
+              <form method="POST" action={% url 'updatestatus' creator.id %}>
+                {% csrf_token %}
+                <td>
+                    <select name="status" id="inputState" class="form-control">
+                      <option selected disabled hidden>{{creator.status}}</option>
+                      <option>Accept</option>
+                      <option>Reject</option>
+                      <option>Hold</option>
+                    </select>
+                  </td>
+                  <td><input type="submit" class="btn btn-accent" value="Yes"></td>
+              </form>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container mt-5">
+
+      <h2 class="text-center"> Requests generated</h2>
+
+      <div class="table-responsive- mt-3">
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">YTubers_name</th>
+              <th scope="col">City</th>
+              <th scope="col">Status</th>
+              <th scope="col">Visit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for tuber in tubers %}
+            <tr>
+              <th scope="row">{{forloop.counter}}</th>
+              <td>{{tuber.tuber_name}}</td>
+              <td>{{tuber.city}}</td>
+              <td>{{tuber.status}}</td>
+              <td>
+                <a href={% url 'youtubers_detail' tuber.tuber_id %}> <div class="btn btn-accent"> More Details </div></a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+{% endblock %}
