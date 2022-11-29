@@ -55,4 +55,4 @@ A marketplace for users to come and see service and pricing of youtubers. Users 
     A prompt screen will appear, if running for the first time. Configure by using the test user email id given in step 5.
 
 # Demo Video
-[![Video Thumbnail](https://github.com/devbk007/tuber/blob/master/ytube_thumbnail.png)](https://youtu.be/rxN8Iuo28oQ)
+[![Video Thumbnail](https://github.com/devbk007/tuber/blob/master/ytube_thumbnail.png)](https://youtu.be/oPmbc3C8G9I)
