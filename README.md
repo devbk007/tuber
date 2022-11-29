@@ -14,9 +14,8 @@ A marketplace for users to come and see service and pricing of youtubers. Users 
 4. Email notifications will be send to user and associated youtuber whenever a request status changes.
 
 
-
 # Database Model
-![Database Model](https://github.com/devbk007/conference_web_application/blob/master/Conference.png?raw=true)
+![Database Model](https://github.com/devbk007/tuber/blob/master/datapoint_diagram.png?raw=true)
 
 # Steps to install application
 1. Create a virtual enviroment
@@ -39,8 +38,11 @@ A marketplace for users to come and see service and pricing of youtubers. Users 
 4. Perform migrations.
     ```
     python manage.py makemigrations
+    ```
+    ```
     python manage.py migrate --run-syncdb
     ```
+
 9. Create a superuser
      ```
     python manage.py createsuperuser
@@ -53,4 +55,4 @@ A marketplace for users to come and see service and pricing of youtubers. Users 
     A prompt screen will appear, if running for the first time. Configure by using the test user email id given in step 5.
 
 # Demo Video
-[![Video Thumbnail](https://github.com/devbk007/conference_web_application/blob/master/ytube_thumbnail.png)](https://youtu.be/d0Aof4ypAqI)
+[![Video Thumbnail](https://github.com/devbk007/tuber/blob/master/ytube_thumbnail.png)](https://youtu.be/rxN8Iuo28oQ)
