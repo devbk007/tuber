@@ -43,12 +43,12 @@ A marketplace for users to come and see service and pricing of youtubers. Users 
     python manage.py migrate --run-syncdb
     ```
 
-9. Create a superuser
+5. Create a superuser
      ```
     python manage.py createsuperuser
     ```
   
-10. Run the command 
+6. Run the command 
     ```
     python manage.py runserver
     ```
